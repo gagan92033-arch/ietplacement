@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Batch Wise Placements | IET DAVV</title>
+
+<style>
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* ===== BODY ===== */
+body {
+    background: linear-gradient(to bottom, #eef4ff, #f9fbff);
+    color: #1f2937;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    background: white;
+    padding: 16px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img {
+    height: 45px;
+}
+
+.logo h2 {
+    color: #0b3c91;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+    color: #111827;
+    position: relative;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #0b3c91;
+}
+
+.nav-links a.active::after,
+.nav-links a:hover::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #0b3c91;
+    bottom: -6px;
+    left: 0;
+    border-radius: 5px;
+}
+
+/* LOGOUT */
+.logout {
+    background: #ef4444;
+    color: white;
+    padding: 10px 22px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.logout:hover {
+    background: #dc2626;
+    transform: scale(1.05);
+}
+
+/* ===== MAIN CARD ===== */
+.container {
+    max-width: 1000px;
+    margin: 60px auto;
+    background: white;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.12);
+}
+
+.container h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #0b3c91;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #6b7280;
+    margin-bottom: 35px;
+}
+
+/* SEARCH */
+.search-box {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: 1px solid #d1d5db;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+/* ===== BATCH LIST ===== */
+.batch {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f8fbff;
+    padding: 22px 28px;
+    border-radius: 16px;
+    margin-bottom: 18px;
+    transition: 0.3s;
+}
+
+.batch:hover {
+    background: #eef4ff;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.year {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.stats {
+    display: flex;
+    gap: 40px;
+    font-weight: 600;
+}
+
+.arrow {
+    font-size: 26px;
+    color: #0b3c91;
+}
+
+/* ===== FOOTER INFO ===== */
+.info {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.info img {
+    height: 70px;
+    margin-bottom: 20px;
+}
+
+.info h3 {
+    color: #0b3c91;
+    margin-bottom: 12px;
+}
+
+.info p {
+    max-width: 650px;
+    margin: auto;
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+.footer {
+    margin-top: 40px;
+    background: #0b3c91;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="logo">
+        <img src="../images/logo.png" alt="IET DAVV">
+        <h2>IET DAVV Engineering College</h2>
+    </div>
+
+    <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="placements.html">Placements</a>
+        <a href="batch-wise.html" class="active">Batch Wise</a>
+        
+        </a>
+
+        <a href="company-wise.html">Company Wise</a>
+        <a href="index.html" class="logout">Logout</a>
+    </div>
+</div>
+
+<!-- MAIN -->
+<div class="container">
+    <h1>Select Batch</h1>
+    <p class="subtitle">Select a batch to view detailed placement records</p>
+
+    <input type="text" class="search-box" placeholder="Enter batch year (e.g. 2023)">
+
+    <div class="batch">
+        <div class="year">2024-2025</div>
+        <div class="stats">
+            <span>Above 10 LPA: 15</span>
+            <span>Below 10 LPA: 40</span>
+        </div>
+        <div class="arrow">›</div>
+    </div>
+
+    <div class="batch">
+        <div class="year">2023-2024</div>
+        <div class="stats">
+            <span>Above 10 LPA: 10</span>
+            <span>Below 10 LPA: 35</span>
+        </div>
+        <div class="arrow">›</div>
+    </div>
+
+    <div class="batch">
+        <div class="year">2022-2023</div>
+        <div class="stats">
+            <span>Above 10 LPA: 8</span>
+            <span>Below 10 LPA: 25</span>
+        </div>
+        <div class="arrow">›</div>
+    </div>
+
+    <div class="batch">
+        <div class="year">2021-2022</div>
+        <div class="stats">
+            <span>Above 10 LPA: 6</span>
+            <span>Below 10 LPA: 22</span>
+        </div>
+        <div class="arrow">›</div>
+    </div>
+
+    <div class="batch">
+        <div class="year">2020-2021</div>
+        <div class="stats">
+            <span>Above 10 LPA: 5</span>
+            <span>Below 10 LPA: 20</span>
+        </div>
+        <div class="arrow">›</div>
+    </div>
+
+    <div class="batch">
+        <div class="year">2019-2020</div>
+        <div class="stats">
+            <span>Above 10 LPA: 3</span>
+            <span>Below 10 LPA: 18</span>
+        </div>
+        <div class="arrow">›</div>
+    </div>
+</div>
+
+<!-- INFO -->
+<div class="info">
+    <img src="../images/logo.png">
+    <h3>Welcome to IET DAVV Engineering College Placements</h3>
+    <p>
+        The Career Planning Cell (CPC) of IET DAVV Engineering College is
+        dedicated to guiding students towards successful careers.
+    </p>
+</div>
+
+<div class="footer">
+    © 2026 IET DAVV Engineering College · CPC
+</div>
+
+</body>
+</html>
